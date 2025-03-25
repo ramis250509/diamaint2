@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+.text-style {
+    @apply font-[Montserrat] text-[#828282] sm:text-[18px] text-[15px] max-w-[391px];
+}
+.product-p {
+    @apply text-[13px]
+}
+body {
+    width: 100%;
+}
+.arrow-left-right {
+    @apply text-[40px] cursor-pointer transition-opacity duration-1000 ease-in-out border border-[#888794] rounded-[50%] w-[62px] text-center
+}
+
+
+/* SECTION 4 */
+.three-sale-boxes {
+    @apply max-w-[350px]
+}
+
+.three-p-sale-box {
+    @apply font-[Montserrat] text-[36px] leading-[136%] text-[#515076] bg-[#51507626]
+}
+
+.three-desc-sale-box {
+    @apply font-[Montserrat] text-[18px] leading-[136%] text-[#515076]
+}
+
+.three-prize-sale-box {
+    @apply font-[Montserrat] leading-[136%] text-[#515076]
+}

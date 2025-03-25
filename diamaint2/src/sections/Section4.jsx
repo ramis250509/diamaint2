@@ -1,0 +1,51 @@
+import React from 'react'
+import flower from '../assets/section4/flower.png'
+import jar1 from '../assets/section4/jar1.svg'
+import jar2 from '../assets/section4/jar2.svg'
+import jar3 from '../assets/section4/jar3 1.png'
+import jar4 from '../assets/section4/jar3 2.png'
+import jar5 from '../assets/section4/jar3 3.png'
+import card from '../assets/section2/card.svg';
+import SaleBox from '../components/SaleBox'
+
+const Section4 = () => {
+  const jars = [
+    {
+    num: 5,
+    text: 'Приобретая увлажняющий крем и маску, вы получаете скидку 5% на весь товар',
+    img: jar1,
+    oldPrice: 5000,
+    newPrice: 4750,
+    },
+    {
+    num: 10,
+    text: 'Приобретая увлажняющий крем и маску, вы получаете скидку 10% на весь товар',
+    img: jar2,
+    oldPrice: 4400,
+    newPrice: 3960,
+    },
+    {
+    num: 20,
+    text: 'Приобретая увлажняющий крем и маску, вы получаете скидку 20% на весь товар',
+    img: jar3,
+    img2: jar4,
+    img3: jar5,
+    oldPrice: 9400,
+    newPrice: 7520,
+    },
+  ]
+
+  return (
+    <section className='flex justify-center'>
+        <div className='flex items-center gap-3'>
+            <SaleBox num={jars[0].num} img={jars[0].img} text={jars[0].text} oldPrice={jars[0].oldPrice} newPrice={jars[0].newPrice} height='600'/>
+
+            <SaleBox num={jars[1].num} img={jars[1].img} text={jars[1].text} oldPrice={jars[1].oldPrice} newPrice={jars[1].newPrice} height='700'/>
+
+            <SaleBox num={jars[2].num} img={jars[2].img} text={jars[2].text} oldPrice={jars[2].oldPrice} newPrice={jars[2].newPrice} height='800'/>
+        </div>
+    </section>
+  )
+}
+
+export default Section4
