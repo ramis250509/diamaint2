@@ -1,11 +1,7 @@
 import React from 'react'
-import flower from '../assets/section4/flower.png'
 import jar1 from '../assets/section4/jar1.svg'
-import jar2 from '../assets/section4/jar2.svg'
-import jar3 from '../assets/section4/jar3 1.png'
-import jar4 from '../assets/section4/jar3 2.png'
-import jar5 from '../assets/section4/jar3 3.png'
-import card from '../assets/section2/card.svg';
+import jar2 from '../assets/section4/2.png'
+import jar3 from '../assets/section4/3.png'
 import SaleBox from '../components/SaleBox'
 
 const Section4 = () => {
@@ -28,8 +24,6 @@ const Section4 = () => {
     num: 20,
     text: 'Приобретая увлажняющий крем и маску, вы получаете скидку 20% на весь товар',
     img: jar3,
-    img2: jar4,
-    img3: jar5,
     oldPrice: 9400,
     newPrice: 7520,
     },
@@ -37,12 +31,14 @@ const Section4 = () => {
 
   return (
     <section className='flex justify-center'>
-        <div className='flex items-end gap-3'>
-            <SaleBox num={jars[0].num} img={jars[0].img} text={jars[0].text} oldPrice={jars[0].oldPrice} newPrice={jars[0].newPrice} height='600' saleHeight='100' imageGap='7' boldness='400'/>
+        <div className='flex items-end gap-[35px]'>
+            <SaleBox num={jars[0].num} img={jars[0].img} text={jars[0].text} oldPrice={jars[0].oldPrice} newPrice={jars[0].newPrice} height='600' saleHeight='100' imageGap='7' boldness='400' imageH='305' imageW='350'/>
 
-            <SaleBox num={jars[1].num} img={jars[1].img} text={jars[1].text} oldPrice={jars[1].oldPrice} newPrice={jars[1].newPrice} height='700' saleHeight='150' imageGap='57' boldness='500'/>
+            <SaleBox num={jars[1].num} img={jars[1].img} text={jars[1].text} oldPrice={jars[1].oldPrice} newPrice={jars[1].newPrice} height='700' saleHeight='150' imageGap='57' boldness='500'
+            imageH='305' imageW='350'/>
 
-            <SaleBox num={jars[2].num} img={jars[2].img} text={jars[2].text} oldPrice={jars[2].oldPrice} newPrice={jars[2].newPrice} height='800' saleHeight='200' imageGap='107' boldness='600'/>
+            <SaleBox num={jars[2].num} img={jars[2].img} text={jars[2].text} oldPrice={jars[2].oldPrice} newPrice={jars[2].newPrice} height='800' saleHeight='200' imageGap='107' boldness='600'
+            imageH='305' imageW='350'/>
         </div>
     </section>
   )

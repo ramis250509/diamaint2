@@ -2,9 +2,10 @@ import React from 'react'
 import card from '../assets/section2/card.svg';
 
 const SaleBox = (
-  {num, img, img2, img3, text, oldPrice,
+  {
+   num, img, img2, img3, text, oldPrice,
    newPrice, height, saleHeight, imageGap,
-   boldness
+   boldness, imageW, imageH 
   }
   ) => {
   return (
@@ -15,7 +16,7 @@ const SaleBox = (
         </div>
 
         <div className='bg-[#F7F7FA] flex flex-col items-center flex-1'>
-          <img src={img} alt="img" style={{marginTop: `${imageGap}px`}}/>
+          <img src={img} alt="img" style={{marginTop: `${imageGap}px`, height: `${imageH}`, width: `${imageW}px`}} />
           
           <div className='pl-[40px] pr-[40px] pb-[78p] mt-2.5'>
             <p className='three-desc-sale-box'>{text}</p>
