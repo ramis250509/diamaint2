@@ -20,13 +20,13 @@ body {
 }
 
 .three-p-sale-box {
-    @apply font-[Montserrat] text-[36px] leading-[136%] text-[#515076] bg-[#51507626]
+    @apply font-[Montserrat] text-[36px] leading-[136%] text-[#515076] bg-[#51507626] flex justify-center items-center font-normal
 }
 
 .three-desc-sale-box {
-    @apply font-[Montserrat] text-[18px] leading-[136%] text-[#515076]
+    @apply font-[Montserrat] font-normal text-[18px] leading-[136%] text-[#515076]
 }
 
 .three-prize-sale-box {
-    @apply font-[Montserrat] leading-[136%] text-[#515076]
+    @apply font-[Montserrat] leading-[136%] text-[20px] font-normal
 }

@@ -45,7 +45,7 @@ const Section3 = () => {
   const colRemove = (num) => {
     setTimeout(() => {
       setIsbutton(num)
-    },1500)
+    },500)
   }
 
   if (counter > pInfo[0].length - 1 || counter < 0) {

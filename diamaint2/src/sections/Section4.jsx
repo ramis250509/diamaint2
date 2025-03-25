@@ -37,12 +37,12 @@ const Section4 = () => {
 
   return (
     <section className='flex justify-center'>
-        <div className='flex items-center gap-3'>
-            <SaleBox num={jars[0].num} img={jars[0].img} text={jars[0].text} oldPrice={jars[0].oldPrice} newPrice={jars[0].newPrice} height='600'/>
+        <div className='flex items-end gap-3'>
+            <SaleBox num={jars[0].num} img={jars[0].img} text={jars[0].text} oldPrice={jars[0].oldPrice} newPrice={jars[0].newPrice} height='600' saleHeight='100' imageGap='7' boldness='400'/>
 
-            <SaleBox num={jars[1].num} img={jars[1].img} text={jars[1].text} oldPrice={jars[1].oldPrice} newPrice={jars[1].newPrice} height='700'/>
+            <SaleBox num={jars[1].num} img={jars[1].img} text={jars[1].text} oldPrice={jars[1].oldPrice} newPrice={jars[1].newPrice} height='700' saleHeight='150' imageGap='57' boldness='500'/>
 
-            <SaleBox num={jars[2].num} img={jars[2].img} text={jars[2].text} oldPrice={jars[2].oldPrice} newPrice={jars[2].newPrice} height='800'/>
+            <SaleBox num={jars[2].num} img={jars[2].img} text={jars[2].text} oldPrice={jars[2].oldPrice} newPrice={jars[2].newPrice} height='800' saleHeight='200' imageGap='107' boldness='600'/>
         </div>
     </section>
   )
