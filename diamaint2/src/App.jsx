@@ -15,7 +15,7 @@ function App() {
         <Routes>
           <Route to='*' element={PageNotFound}/>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima adipisci amet officia sed, reiciendis cupiditate est accusamus perferendis iste dignissimos corporis, error voluptatem architecto asperiores sapiente esse ipsum fugiat suscipit.
-        </Routes>
+          </Routes>
       </Router>
     </>
   )

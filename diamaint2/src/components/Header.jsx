@@ -20,8 +20,8 @@ const Navbar = () => {
   };
 
   return (
-    <header className="bg-[#EDECF6] flex justify-center pt-3 pb-5 z-10 md:w-full">
-      <nav className="flex justify-between items-center gap-30 sm:gap-[437px] px-4 z-10 w-full">
+    <header className="bg-[#EDECF6] flex justify-center pt-3 pb-5 z-10 w-full ">
+      <nav className="flex justify-between r px-4 z-10 w-full h-full">
         {/* Left section: Logo and Menu */}
         <div className="flex items-center gap-4 sm:gap-[58px]">
           <img src={logo} alt="logo" className="h-15.5" />
@@ -32,7 +32,7 @@ const Navbar = () => {
                 key={key.id}
                 data-id={key.id}
                 onClick={() => navSel(key.id)}
-                className={`cursor-pointer z-30 text-[16px] hover:opacity-[0.8] ${id === key.id ? 'bg-[#515076] text-[#EDECF6]' : 'text-[#515076]'} pt-4.5 pb-4.5 pl-4 pr-4 rounded-[3px] transition-colors duration-900 ease-in-out whitespace-nowrap`}
+                className={`cursor-pointer z-10 text-[16px] hover:opacity-[0.8] ${id === key.id ? 'bg-[#515076] text-[#EDECF6]' : 'text-[#515076]'} pt-4.5 pb-4.5 pl-4 pr-4 rounded-[3px] transition-colors duration-900 ease-in-out whitespace-nowrap`}
               >
                 {key.name}
               </li>
@@ -48,7 +48,7 @@ const Navbar = () => {
         </div>
 
         {/* Right section: Card and Social Links */}
-        <div className="flex items-center gap-4 sm:gap-[25px] w-full justify-end">
+        <div className="flex items-center gap-4 sm:gap-[25px] w-full justify-end z-10">
           <div className={`bg-white flex justify-center z-10 rounded-[50%] p-3 relative transition-all duration-300 ${isMenuOpen ? 'h-8 w-8' : 'h-10 w-10'}`}>
             <Link to="/">
               <img src={card} alt="card" className="h-full w-full object-cover" />

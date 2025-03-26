@@ -56,7 +56,7 @@ const Section2 = React.memo(() => {
               <div className="ml-[18px] product-p">
                 <p className="font-[Montserrat] font-medium sm:text-[12px] text-2 leading-[24px] tracking-[0.23em] text-[#A5A3B9]">{product.use}</p>
                 <p className="font-[Montserrat] font-normal sm:text-[20px] leading-[27.2px] text-[#515076]">{product.desc}</p>
-                <div className="w-[64px] flex sm:gap-[150px] gap-[30px] product-p">
+                <div className="max-w-[300px] flex justify-between product-p">
                   <div className="flex gap-5">
                     {product.oldprice ? (
                       <p className="font-montserrat font-medium sm:text-[18px] leading-[24.48px] line-through text-[#515076] decoration-1.5">{product.oldprice.toLocaleString('ru-RU')}&nbsp;&#8381;</p>
