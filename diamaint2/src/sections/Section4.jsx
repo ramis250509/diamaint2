@@ -30,8 +30,8 @@ const Section4 = () => {
   ]
 
   return (
-    <section className='flex justify-center'>
-        <div className='flex items-end gap-[35px]'>
+    <section className='flex justify-center sm:mt-0 m-10'>
+        <div className='flex sm:flex-row flex-col  items-end gap-[35px]'>
             <SaleBox num={jars[0].num} img={jars[0].img} text={jars[0].text} oldPrice={jars[0].oldPrice} newPrice={jars[0].newPrice} height='600' saleHeight='100' imageGap='7' boldness='400' imageH='305' imageW='350'/>
 
             <SaleBox num={jars[1].num} img={jars[1].img} text={jars[1].text} oldPrice={jars[1].oldPrice} newPrice={jars[1].newPrice} height='700' saleHeight='150' imageGap='57' boldness='500'
