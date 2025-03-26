@@ -20,8 +20,8 @@ const Navbar = () => {
   };
 
   return (
-    <header className="bg-[#EDECF6] flex justify-center pt-3 pb-5 z-10 w-full fixed top-0">
-      <nav className="flex justify-between items-center gap-30 sm:gap-[437px] px-4 z-10">
+    <header className="bg-[#EDECF6] flex justify-center pt-3 pb-5 z-10 md:w-full">
+      <nav className="flex justify-between items-center gap-30 sm:gap-[437px] px-4 z-10 w-full">
         {/* Left section: Logo and Menu */}
         <div className="flex items-center gap-4 sm:gap-[58px]">
           <img src={logo} alt="logo" className="h-15.5" />
