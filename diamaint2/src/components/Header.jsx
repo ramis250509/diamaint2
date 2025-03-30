@@ -20,7 +20,7 @@ const Navbar = () => {
   };
 
   return (
-    <header className="bg-[#EDECF6] flex justify-center pt-3 pb-5 z-10 w-full ">
+    <header className="bg-[#EDECF6] flex justify-center pt-3 pb-5 z-50 w-full sm:fixed top-0 relative">
       <nav className="flex justify-between r px-4 z-10 w-full h-full">
         {/* Left section: Logo and Menu */}
         <div className="flex items-center gap-4 sm:gap-[58px]">
@@ -40,7 +40,7 @@ const Navbar = () => {
             ))}
           </ul>
           {/* Mobile Menu Toggle */}
-          <div className="sm:hidden">
+          <div className="sm:hidden relative z-10">
             <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="text-[#515076]">
               &#9776; {/* Hamburger Icon */}
             </button>
@@ -48,7 +48,7 @@ const Navbar = () => {
         </div>
 
         {/* Right section: Card and Social Links */}
-        <div className="flex items-center gap-4 sm:gap-[25px] w-full justify-end z-10">
+        <div className="flex items-center gap-4 sm:gap-[25px] sm:w-full justify-end z-10 w-[150px]">
           <div className={`bg-white flex justify-center z-10 rounded-[50%] p-3 relative transition-all duration-300 ${isMenuOpen ? 'h-8 w-8' : 'h-10 w-10'}`}>
             <Link to="/">
               <img src={card} alt="card" className="h-full w-full object-cover" />

@@ -4,19 +4,23 @@ import diamaint from '../assets/section5/Diamaint.png'
 import flower from '../assets/section5/Mask Group.png'
 
 const Section5 = () => {
-  return (
-    <section className='relative bg-[#EDECF6] flex justify-center items-center pt-[133px] pr-[702px] pb-[69px] pl-[169px] h-[1023px] sm:mt-[352px]'>
-      <img src={diamaint} alt="diamaint" className='absolute sm:top-[-15%] sm:left-[120px]' />
-      <div className='flex'>
-        <img src={mainImg} alt="main image" />
+  const screeWidth = window.innerWidth;
 
-        <div className='w-[623px] absolute sm:top-[330px] sm:right-[168px] sm:bottom-[210px] z-10'>
+
+  return (
+    <section className='relative bg-[#EDECF6] flex justify-center items-center sm:pt-[133px] sm:pr-[702px] sm:pb-[69px] sm:pl-[169px] h-[1023px] sm:mt-[352px]'>
+      <img src={diamaint} alt="diamaint" className='absolute sm:top-[-15%] sm:left-[120px] top-[-3%] left-[30px] sm:w-[1372px] w-[320px]' />
+
+      <div className='flex'>
+        <img src={mainImg} alt="main image" className='sm:mt-0 mt-[700px]'/>
+
+        <div className='sm:w-[623px] w-[300px] absolute sm:top-[330px] sm:right-[168px] sm:bottom-[210px] top-[100px] right-[15%] z-10'>
 
             <p className="font-[Montserrat] font-medium text-base leading-[180%] tracking-[0.3em] uppercase w-[343px] text-[#A5A3B9]">
                 Протестировали и довольны результатом
             </p>
                 
-            <p className="font-[Montserrat] text-[120px] text-[#515076]" >
+            <p className="font-[Montserrat] text-[120px] text-[#515076] sm:w-[300px]" >
                 6800 
 
                 <span className="font-[Montserrat] text-[70px] leading-[109%] block">
@@ -25,13 +29,13 @@ const Section5 = () => {
             </p>
 
             <p className="
-            font-[Montserrat] font-medium text-base leading-[200%] tracking-[0em] text-[#888794] w-[462px]">
+            font-[Montserrat] font-medium text-base leading-[200%] tracking-[0em] text-[#888794] sm:w-[462px] w-[350px] sm:mt-0 mt-[30px]">
                 96% женщин заметили положительный результат уже после недели использования линейки средств. Кожа стала более ухоженной, увлажненной и напитанной. Исчезли или значительно уменьшились воспаления. А приятный аромат и легкая текстура стали отличным дополнением с утренне-вечерним ритуалам ухода.
             </p>
         </div>
       </div>
 
-      <img src={flower} alt="flower image" className='absolute top-[91px] right-[17px]'/>
+      {screeWidth < 768 ? null : <img src={flower} alt="flower image" className='absolute top-[91px] right-[17px]'/>}
     </section>
   )
 }

@@ -53,7 +53,7 @@ const Section3 = () => {
   }
 
   return (
-    <section className='flex sm:flex-row flex-col gap-[210px] justify-center text-[#757AA5] sm:mt-[180px] mt-[120px]' id='obj-2'>
+    <section className='flex sm:flex-row flex-col gap-[210px] justify-center text-[#757AA5] sm:mt-[180px] pt-[120px]' id='obj-2'>
 
       {/* Left side of the Section3 Arrows and Stocks */}
 
