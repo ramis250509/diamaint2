@@ -14,18 +14,19 @@ const Navbar = () => {
   
   const [id, setId] = useState();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const screenWidth = window.innerWidth;
 
   const navSel = (key) => {
     setId(key);
   };
 
   return (
-    <header className="bg-[#EDECF6] flex justify-center pt-3 pb-5 z-50 w-full sm:fixed top-0 relative">
-      <nav className="flex justify-between r px-4 z-10 w-full h-full">
+    <header className="bg-[#EDECF6] flex justify-center pt-3 pb-5 z-50 sm:fixed top-0 relative w-full">
+      <nav className="flex justify-between z-10 w-full h-full">
         {/* Left section: Logo and Menu */}
-        <div className="flex items-center gap-4 sm:gap-[58px]">
+        <div className="flex items-center gap-4 lg:gap-[58px] md:gap-0">
           <img src={logo} alt="logo" className="h-15.5" />
-          <ul className="hidden sm:flex items-center gap-4">
+          <ul className="hidden sm:flex items-center lg:gap-4 md:gap-1 gap-2">
             {keys.map((key) => (
             <Link key={key.id} to={`obj-${key.id}`} smooth={true} duration={500}>
                 <li
@@ -48,7 +49,7 @@ const Navbar = () => {
         </div>
 
         {/* Right section: Card and Social Links */}
-        <div className="flex items-center gap-4 sm:gap-[25px] sm:w-full justify-end z-10 w-[150px]">
+        <div className="flex items-center gap-4 sm:gap-[25px] lg:w-full md:w-min justify-end z-10 w-[150px]">
           <div className={`bg-white flex justify-center z-10 rounded-[50%] p-3 relative transition-all duration-300 ${isMenuOpen ? 'h-8 w-8' : 'h-10 w-10'}`}>
             <Link to="/">
               <img src={card} alt="card" className="h-full w-full object-cover" />
@@ -66,16 +67,17 @@ const Navbar = () => {
       {isMenuOpen && (
         <ul className="sm:hidden flex flex-col items-center gap-2 py-4 bg-[#EDECF6] w-full">
           {keys.map((key) => (
-            <li
-              key={key.id}
+            <Link key={key.id} to={`obj-${key.id}`} smooth={true} duration={500}>
+              <li
               onClick={() => {
                 navSel(key.id);
                 setIsMenuOpen(false); // Close menu on item click
               }}
               className={`cursor-pointer ${id === key.id ? 'bg-[#515076] text-[#EDECF6]' : 'text-[#515076]'}  py-2 px-4 w-full text-center rounded-[3px] transition-colors duration-900 ease-in-out`}
-            >
+              >
               {key.name}
             </li>
+            </Link>
           ))}
         </ul>
       )}

@@ -2,9 +2,15 @@ import React from 'react'
 import line from '../assets/section6/Line 3.png'
 
 
-const GoodKnow = ({ position }) => {
+const GoodKnow = ({ className }) => {
+  if (className) {
+    console.log(className)
+  }
   return (
-    <div className='border-t-6 border-[#515076] w-[300px] bg-[#F7F7FA] pl-[48px] pt-[36px] pr-[14px] pb-[35px] relative' style={{ ...position }}>
+    <div
+     
+    className={`border-t-6 border-[#515076] w-[300px] bg-[#F7F7FA] pl-[48px] pt-[36px] pr-[14px] pb-[35px] relative ${className ? className : ''}`}>
+
       <div className=''>
         <p className='text-[#A5A3B9] font-[Montserrat] text-[12px] font-medium tracking-[0.23em] uppercase mb-1 leading-[200%]'>Совет</p>
 

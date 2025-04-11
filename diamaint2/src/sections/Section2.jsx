@@ -40,16 +40,16 @@ const Section2 = React.memo(() => {
   }, [isSmall, productsData]);
 
   return (
-    <section className="mt-15 flex justify-center relative z-10" id="target">
+    <section className="pt-[85px] flex justify-center relative z-10" id="target">
       <div>
         <h2 className="text-center z-10 font-montserrat font-extralight sm:text-[70px] text-[35px] leading-[76.58px] tracking-normal text-[#757AA5] mb-20">
           Выбери свой продукт
         </h2>
 
-        <div className="flex sm:gap-8 gap-2 items-end">
+        <div className="flex lg:gap-8 md:gap-2 gap-2 items-end">
           {filteredProducts.map((product) => (
             <div
-              className="z-10 bg-[#F7F7FA] pt-[62px] pl-[20px] pr-[20px] pb-[18px] product-p"
+              className="z-10 bg-[#F7F7FA] pt-[62px] pl-[20px] pr-[20px] pb-[18px] product-p sm:h-auto h-[400px]"
               key={product.id}
             >
               <img src={product.img} alt="product" loading="lazy" />
@@ -72,7 +72,7 @@ const Section2 = React.memo(() => {
       </div>
 
       <img
-        className="absolute left-[0px] top-[-300px] rotate-y-165"
+        className="absolute left-[0px] sm:top-[-300px] top-[30px] rotate-y-165"
         src={bg}
         alt="background"
         loading="lazy"

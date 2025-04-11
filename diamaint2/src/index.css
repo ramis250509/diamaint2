@@ -10,7 +10,7 @@ body {
     width: 100%;
 }
 .arrow-left-right {
-    @apply text-[40px] cursor-pointer transition-opacity duration-1000 ease-in-out border border-[#888794] rounded-[50%] w-[62px] text-center
+    @apply cursor-pointer transition-opacity duration-1000 ease-in-out border border-[#888794] rounded-[50%] text-center
 }
 
 
@@ -29,4 +29,8 @@ body {
 
 .three-prize-sale-box {
     @apply font-[Montserrat] leading-[136%] text-[20px] font-normal
+}
+
+@media (width >= 40rem /* 640px */) {
+    @apply left-[335px]
 }
