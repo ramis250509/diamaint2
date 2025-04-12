@@ -3,7 +3,7 @@ import GoodKnow from '../components/GoodKnow'
 
 const Section6 = () => {
   return (
-    <section className='flex justify-center  relative pt-[125px]'>
+    <section className='flex justify-center  relative pt-[125px]' id='obj-3'>
   
     <div className='flex flex-col gap-18 items-center'>
 

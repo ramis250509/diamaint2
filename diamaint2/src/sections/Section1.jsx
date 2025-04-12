@@ -19,7 +19,7 @@ const Section1 = () => {
 
   
   return (
-    <section>
+    <section id="obj-0">
       <div className='flex justify-center mt-[0px] sm:mt-[127px] relative'>
         <div className='w-[1280px]'>
           <h1
@@ -64,7 +64,7 @@ const Section1 = () => {
           </p>}
 
           <p className={`font-[Montserrat] font-normal text-[18px] leading-[30.6px] text-[#888794] z-10
-           text-left absolute sm:top-[1286px] top-[1000px] lg:left-[335px] md:left-[130px]`} style={{left: `${madeLeft}px`}}>
+           text-left absolute sm:top-[1286px] top-[1000px] lg:left-[130px] md:left-[130px] left-[${madeLeft}px]`} /* style={{left: `${madeLeft}px`}} */>
             Ингридиенты контролируются по <br /> качеству и происхождению. <br /> Большинство из них имеют <br /> органический сертификат Ecoсert и Soil <br /> Association. Сочетание компонентов в <br /> каждой линейке подобрано с учетом <br /> особенностей типа кожи.
           </p>
 

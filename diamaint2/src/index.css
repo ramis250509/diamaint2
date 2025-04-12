@@ -34,3 +34,21 @@ body {
 @media (width >= 40rem /* 640px */) {
     @apply left-[335px]
 }
+
+/* Section7 */
+.section7-text {
+    @apply font-[Montserrat]
+}
+.authors {
+    @apply font-[Montserrat]
+    font-extralight
+    text-[70px]
+    leading-[109.00000000000001%]
+    text-[#515076]    
+}
+
+/*     Section8 */
+
+.address-number {
+    @apply font-[Montserrat] font-medium text-[16px] leading-[200%] text-[#828282] w-[395px] mb-[15px]
+}
