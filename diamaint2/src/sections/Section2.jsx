@@ -5,6 +5,7 @@ import jar3 from '../assets/section2/jar4.svg';
 import sale from '../assets/section2/sale.svg';
 import card from '../assets/section2/card.svg';
 import bg from '../assets/section2/Mask Group.png';
+import { Link } from 'react-router-dom';
 
 const Section2 = React.memo(() => {
   const [isSmall, setIsSmall] = useState(window.innerWidth);
@@ -40,7 +41,7 @@ const Section2 = React.memo(() => {
   }, [isSmall, productsData]);
 
   return (
-    <section className="pt-[85px] flex justify-center relative z-10" id="target">
+    <section className="pt-[85px] flex justify-center relative z-10 lg:mb-30" id="target">
       <div>
         <h2 className="text-center z-10 font-montserrat font-extralight sm:text-[70px] text-[35px] leading-[76.58px] tracking-normal text-[#757AA5] mb-20">
           Выбери свой продукт
@@ -48,9 +49,10 @@ const Section2 = React.memo(() => {
 
         <div className="flex lg:gap-8 md:gap-2 gap-2 items-end">
           {filteredProducts.map((product) => (
+            <Link to={`/product/${product.id}`} key={product.id}>
             <div
-              className="z-10 bg-[#F7F7FA] pt-[62px] pl-[20px] pr-[20px] pb-[18px] product-p sm:h-auto h-[400px]"
-              key={product.id}
+              className="z-10 bg-[#F7F7FA] pt-[62px] pl-[20px] pr-[20px] pb-[18px] product-p sm:h-auto h-[400px] 
+              hover:cursor-pointer"
             >
               <img src={product.img} alt="product" loading="lazy" />
               <div className="ml-[18px] product-p">
@@ -66,7 +68,8 @@ const Section2 = React.memo(() => {
                   <img src={card} alt="card" loading="lazy" />
                 </div>
               </div>
-            </div>
+            </div>            
+            </Link>
           ))}
         </div>
       </div>

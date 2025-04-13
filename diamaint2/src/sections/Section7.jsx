@@ -40,7 +40,7 @@ const Section7 = () => {
         </div>
 
         {
-        width < 640 ? "" : <div>
+        width < 830 ? "" : <div>
                                 <img src={sideImg} alt="" className='w-[603px] h-[671px] object-cover'/>
                             </div>
         }

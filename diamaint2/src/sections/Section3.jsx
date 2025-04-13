@@ -53,38 +53,52 @@ const Section3 = () => {
   }
 
   return (
-    <section className='flex lg:flex-row md:flex-col flex-col lg:gap-[20px] md:gap-0 gap-[210px] justify-center text-[#757AA5] sm:mt-[180px] pt-[120px]' id='obj-2'>
+    <section className={`flex justify-center items-center text-[#757AA5] sm:mt-[180px] md:pt-[150px] pt-[450px] ${screen === 1024 ? '' : 'lg:max-h-[800px]'} sm:mb-0 mb-[400px] md:mb-[100px] lg:mb-[100px]' id='obj-2`} id='obj-2'>
 
-      {/* Left side of the Section3 Arrows and Stocks */}
+      <div className={`flex ${screen === 1024 ? 'lg:flex-col' : 'lg:flex-row'}  md:flex-col flex-col lg:gap-0 md:gap-0 gap-[100px]`}>
+        {/* Left side of the Section3 Arrows and Stocks */}
 
-      <div className='z-10 lg:mb-[500px] md:mb-[130px] mb-[100px] lg:block sm:flex sm:flex-col sm:justify-center sm:items-center'>
-        <h2 className="font-[Montserrat] font-[275] text-[70px] leading-[76.58px] text-[#757AA5] mb-25 lg:text-left md:text-center text-center"
-        >Акции</h2>
-        <p className={`"font-[Montserrat] font-medium lg:text-lg md:text-[35px] text-5 leading-9 mb-12.5 text-[#888794] sm:w-[333px] w-[${screen}px] text-left"`}
-        >Каждый месяц мы отбираем специальную линейку продуктов, которая нравится вам и снижаем цены!</p>
-        {ScreenSmall ? '' : <div className="flex gap-5">
-          <button onClick={() => handleClick(1)} className={`arrow-left-right lg:text-[40px] md:text-[70px] text-[40px] lg:w-[62px] md:w-[114px] w-[62px] ${isButton === 2 ? 'opacity-40' : ''}`}>&lt;</button>
-          <button onClick={() => handleClick(2)} className={`arrow-left-right lg:text-[40px] md:text-[70px] text-[40px] lg:w-[62px] md:w-[114px] w-[62px] ${isButton === 1 ? 'opacity-40' : ''}`}>&gt;</button>
-        </div>}
-      </div>
+        <div className={`z-10 md:mb-[130px] mb-[100px] ${screen === 1024 ? 'lg:flex' : 'lg:block '} flex flex-col justify-center items-center min-h`}>
+          <h2 className="font-[Montserrat] font-[275] text-[70px] leading-[76.58px] text-[#757AA5] md:mb-25 mb-4 lg:text-left md:text-center text-center"
+          >Акции</h2>
+          <p className={`"font-[Montserrat] font-medium lg:text-[18px] md:text-[35px] text-5 leading-9 md:mb-12.5 text-[#888794] sm:w-[333px] text-left"`}
+          >Каждый месяц мы отбираем специальную линейку продуктов, которая нравится вам и снижаем цены!</p>
+          {screen <= 100 ? '' : <div className="flex gap-5 sm:mb-0 sm:mt-0 mb-25 mt-5">
+            <button onClick={() => handleClick(1)} 
+            className={`arrow-left-right 
+            ${isButton === 2 ? 'opacity-40' : ''}`}>&lt;</button>
 
-      {/* Right side of the Section3 Product Info */}
-      <div>
-        <div className={`h-[521px] relative ${ScreenSmall ? `w-[${screen}px]` : 'bg-[#515076] w-[810px]'}`}>
-          {ScreenSmall ? '' : <img src={fgs} alt="for a good skin" className='absolute left-3 bottom-10'/> }
+            <button onClick={() => handleClick(2)} 
+            className={`arrow-left-right 
 
-          <div className='flex sm:flex-row flex-col lg:gap-4 md:gap-0 gap-4 bg-[#F7F7FA] absolute sm:bottom-[40px] sm:left-[35px] bottom-[0px] left-[0px] lg:pt-[58px] lg:pl-[62px] lg:pb-[72px] md:pt-[40px] md:pl-[10px] md:pr-[10px] md:pb-[40px] pt-[0px] pl-[0px] pb-[0px]'>
-            <div>
-                <div className='bg-#EDECF6 font-[Montserrat] font-[400] text-4.5  text-[#515076] rounded-[50%] bg-[#EDECF6] sm:w-16 sm:h-16 w-12 h-12 flex justify-center items-center mb-4'>0{pInfo[2][counter]}</div>
-                <p className='font-[Montserrat] font-light text-[30px] leading-10  text-[#4C5072] w-[337px] mb-5 text-left'>{pInfo[0][counter]}</p>
-                <p className={`font-[Montserrat] font-medium text-base leading-8 text-[#888794] sm:w-auto`}
-                >{pInfo[1][counter]}</p>
-            </div>
-            <img src={jar2} alt="jar2" className=''/>
-          </div>
+             ${isButton === 1 ? 'opacity-40' : ''}`}>&gt;</button>
 
+          </div>}
         </div>
+
+        {/* Right side of the Section3 Product Info */}
+        <div>
+          <div className='h-[521px] relative' style={{
+                width: screen < 768 ? `${screen}px` : '810px',
+                backgroundColor: screen < 768 ? undefined : '#515076'
+              }}>
+            {ScreenSmall ? '' : <img src={fgs} alt="for a good skin" className='absolute left-3 bottom-10'/> }
+
+            <div className='flex sm:flex-row flex-col lg:gap-4 md:gap-0 gap-4 bg-[#F7F7FA] absolute sm:bottom-[40px] sm:left-[35px] bottom-[0px] left-[0px] lg:pt-[58px] lg:pl-[62px] lg:pb-[72px] md:pt-[40px] md:pl-[10px] md:pr-[10px] md:pb-[40px] pt-[0px] pl-[0px] pb-[0px]'>
+              <div>
+                  <div className='bg-#EDECF6 font-[Montserrat] font-[400] text-4.5  text-[#515076] rounded-[50%] bg-[#EDECF6] sm:w-16 sm:h-16 w-12 h-12 flex justify-center items-center mb-4'>0{pInfo[2][counter]}</div>
+                  <p className='font-[Montserrat] font-light text-[30px] leading-10  text-[#4C5072] w-[337px] mb-5 text-left'>{pInfo[0][counter]}</p>
+                  <p className={`font-[Montserrat] font-medium text-base leading-8 text-[#888794] sm:w-auto`}
+                  >{pInfo[1][counter]}</p>
+              </div>
+              <img src={jar2} alt="jar2" className=''/>
+            </div>
+
+          </div>
+        </div>
+
       </div>
+
     </section>
   )
 }
