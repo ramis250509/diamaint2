@@ -61,12 +61,12 @@ const Section3 = () => {
         <div className={`z-10 md:mb-[130px] mb-[100px] ${screen === 1024 ? 'lg:flex' : 'lg:block '} flex flex-col justify-center items-center min-h`}>
           <h2 className="font-[Montserrat] font-[275] text-[70px] leading-[76.58px] text-[#757AA5] md:mb-25 mb-4 lg:text-left md:text-center text-center"
           >Акции</h2>
-          <p className={`"font-[Montserrat] font-medium lg:text-[18px] md:text-[35px] text-5 leading-9 md:mb-12.5 text-[#888794] sm:w-[333px] text-left"`}
+          <p className={`"font-[Montserrat] font-medium ${screen === 1024 ? 'lg:text-[30px]' : 'lg:text-[18px]'} md:text-[35px] text-5 leading-9 md:mb-12.5 text-[#888794] sm:w-[333px] text-left"`}
           >Каждый месяц мы отбираем специальную линейку продуктов, которая нравится вам и снижаем цены!</p>
           {screen <= 100 ? '' : <div className="flex gap-5 sm:mb-0 sm:mt-0 mb-25 mt-5">
             <button onClick={() => handleClick(1)} 
-            className={`arrow-left-right 
-            ${isButton === 2 ? 'opacity-40' : ''}`}>&lt;</button>
+            className={`arrow-left-right ${isButton === 2 ? 'opacity-40' : ''}
+            `}>&lt;</button>
 
             <button onClick={() => handleClick(2)} 
             className={`arrow-left-right 

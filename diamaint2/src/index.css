@@ -7,13 +7,11 @@
     @apply text-[13px]
 }
 body {
-    width: 100%;
 }
 .arrow-left-right {
     @apply cursor-pointer transition-opacity duration-1000 ease-in-out 
            border border-[#888794] rounded-[50%] text-center 
-           text-[40px] w-[62px] md:text-[70px] md:w-[114px] 
-           lg:text-[40px] lg:w-[62px];
+           text-[40px] w-[62px] md:text-[60px] md:w-[80px] lg:text-[40px] lg:w-[62px]
   }  
 
 

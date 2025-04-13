@@ -2,6 +2,7 @@ import React from 'react'
 import GoodKnow from '../components/GoodKnow'
 
 const Section6 = () => {
+  const screen = window.innerWidth;
   return (
     <section className='flex justify-center  relative pt-[125px]' id='obj-3'>
   
@@ -12,8 +13,8 @@ const Section6 = () => {
       <div className='flex flex-col gap-[30px]'>
         <GoodKnow />
         <GoodKnow />
-        <GoodKnow className='sm:absolute sm:top-[498px] sm:left-[160px]' />
-        <GoodKnow className='sm:absolute sm:top-[402px] sm:right-[160px]' />
+        <GoodKnow className={`lg:absolute lg:top-[498px] ${screen === 1024 ? 'lg:left-[40px]' : 'lg:left-[160px]'}`} />
+        <GoodKnow className={`lg:absolute lg:top-[402px] ${screen === 1024 ? 'lg:right-[40px]' : 'lg:right-[160px]'} `} />
       <div/>
 
       </div>
