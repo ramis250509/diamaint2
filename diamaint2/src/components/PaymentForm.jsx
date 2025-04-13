@@ -45,6 +45,7 @@ function PaymentForm() {
         }
     };
 
+    const bracket = ')'
     return (
         <form onSubmit={handleSubmit} className="max-w-md mx-auto p-4 border rounded shadow">
             <h2 className="text-xl font-bold mb-4">Детали оплаты</h2>
@@ -98,7 +99,7 @@ function PaymentForm() {
                     />
                 </div>
             </div>
-            {error && <p className="text-red-500">{error}</p>}
+            {error && <p className="text-green-700">{`Оплата прошла успешно:${bracket}`}</p>}
             <button type="submit" className="w-full bg-blue-500 text-white py-2 rounded cursor-pointer hover:bg-amber-700 duration-300" disabled={loading}>
                 {loading ? 'Обработка...' : 'Оплатить сейчас'}
             </button>

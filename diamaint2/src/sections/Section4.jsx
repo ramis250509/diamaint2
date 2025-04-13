@@ -4,41 +4,27 @@ import jar2 from '../assets/section4/2.png'
 import jar3 from '../assets/section4/3.png'
 import SaleBox from '../components/SaleBox'
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
+import Jars from '../data/Jars'
 const Section4 = () => {
-  const jars = [
-    {
-    num: 5,
-    text: 'Приобретая увлажняющий крем и маску, вы получаете скидку 5% на весь товар',
-    img: jar1,
-    oldPrice: 5000,
-    newPrice: 4750,
-    },
-    {
-    num: 10,
-    text: 'Приобретая увлажняющий крем и маску, вы получаете скидку 10% на весь товар',
-    img: jar2,
-    oldPrice: 4400,
-    newPrice: 3960,
-    },
-    {
-    num: 20,
-    text: 'Приобретая увлажняющий крем и маску, вы получаете скидку 20% на весь товар',
-    img: jar3,
-    oldPrice: 9400,
-    newPrice: 7520,
-    },
-  ]
+
   const [screenW, setScreenW] = useState(window.innerWidth);
   return (
     <section className='flex justify-center mb-[120px]'>
         <div className={`flex lg:flex-row md:flex-col flex-col  items-end ${screenW === 1024 ? 'lg:gap-[10px]' : 'lg:gap-[35px]'}`}>
-            <SaleBox num={jars[0].num} img={jars[0].img} text={jars[0].text} oldPrice={jars[0].oldPrice} newPrice={jars[0].newPrice} height='600' saleHeight='100' imageGap='7' boldness='400' imageH='305' imageW='350'/>
+            <Link to={`/product/${Jars[0].id}`}>
+              <SaleBox num={Jars[0].num} img={Jars[0].img} text={Jars[0].text} oldPrice={Jars[0].oldPrice} newPrice={Jars[0].newPrice} height='600' saleHeight='100' imageGap='7' boldness='400' imageH='305' imageW='350'/>
+            </Link>
 
-            <SaleBox num={jars[1].num} img={jars[1].img} text={jars[1].text} oldPrice={jars[1].oldPrice} newPrice={jars[1].newPrice} height='700' saleHeight='150' imageGap='57' boldness='500'
-            imageH='305' imageW='350'/>
+            <Link to={`/product/${Jars[1].id}`}>
+              <SaleBox num={Jars[1].num} img={Jars[1].img} text={Jars[1].text} oldPrice={Jars[1].oldPrice} newPrice={Jars[1].newPrice} height='700' saleHeight='150' imageGap='57' boldness='500'
+              imageH='305' imageW='350'/>          
+            </Link>
 
-            <SaleBox num={jars[2].num} img={jars[2].img} text={jars[2].text} oldPrice={jars[2].oldPrice} newPrice={jars[2].newPrice} height='800' saleHeight='200' imageGap='107' boldness='600'
-            imageH='305' imageW='350'/>
+            <Link to={`/product/${Jars[2].id}`}>
+              <SaleBox num={Jars[2].num} img={Jars[2].img} text={Jars[2].text} oldPrice={Jars[2].oldPrice} newPrice={Jars[2].newPrice} height='800' saleHeight='200' imageGap='107' boldness='600'
+              imageH='305' imageW='350'/>
+            </Link>
         </div>
     </section>
   )

@@ -3,9 +3,7 @@ import line from '../assets/section6/Line 3.png'
 
 
 const GoodKnow = ({ className }) => {
-  if (className) {
-    console.log(className)
-  }
+
   return (
     <div
      
